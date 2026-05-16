@@ -8,12 +8,11 @@
 
 ```yaml
 ---
-created: {{date}} {{time}}
-updated: {{date}} {{time}}
-status: raw
-type: inbox
+collected_at: {{date:YYYY-MM-DD HH:mm}}
+collected_by: jarvis
 source_url: ""
 source_platform: ""
+source_author: ""
 content_type: ""
 ---
 
@@ -28,7 +27,7 @@ content_type: ""
 （核心观点、内容梳理、关键数据等结构化整理）
 ```
 
-Inbox 笔记的处理结果（refine → connect → seed）会被转入对应的 PARA 目录，Inbox 中的原始文件按养料消耗模型处理。
+Inbox 笔记不设 type 和 status 字段。分类处理时由 classifier 分配 type 和 status。处理后转入对应 PARA 目录，Inbox 中的原始文件按养料消耗模型处理。
 
 ## Project 笔记模板
 

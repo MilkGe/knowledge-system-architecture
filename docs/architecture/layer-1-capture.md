@@ -66,7 +66,6 @@
 
 | 属性 | 值规则 | 示例 |
 |------|--------|------|
-| `type` | `inbox` | `type: inbox` |
 | `source_url` | 原文链接 | `source_url: "https://..."` |
 | `source_platform` | 中文平台名 | `"抖音"` / `"小红书"` / `"B站"` |
 | `source_author` | 作者/账号 | `"硅谷赵博"` |
@@ -75,6 +74,8 @@
 | `content_type` | 内容形态 | `"视频"` / `"图文"` / `"文章"` |
 | `transcribed` | 布尔值 | `true` / `false` |
 | `transcript_model` | 转录引擎 | `"SenseVoice-Small"`（仅转录时） |
+
+> Inbox 笔记不设 type 字段。采集管道只写采集元数据，分类时由 classifier 分配 type。
 
 **`collected_at` 格式**：必须使用 ISO 8601 的 T 分隔格式，否则 Obsidian 无法识别为日期类型字段。
 
